@@ -1,0 +1,169 @@
+:root {
+    --bg: #0f1117;
+    --panel: #171a23;
+    --panel2: #1c2030;
+    --accent: #6c8cff;
+    --accent2: #ff8c6c;
+    --good: #5fd489;
+    --text: #e9ebf3;
+    --muted: #9096ab;
+    --border: #2a2e3d;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+  }
+
+
+  .note {
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 20px 24px 0;
+    color:var(--muted);
+    font-size: 0.9rem;
+  }
+
+ code{
+    background: #232636;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color:var(--accent2);
+ }
+/* ========================DASHBOARD================================== */
+  .dashboard{
+    display:grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: 
+    "sidebar topbar"
+    "sidebar main";
+    min-height: 100vh;
+  }
+
+
+  /* =============================SIDEBAR==================== */
+
+  .sidebar{
+    grid-area: sidebar;
+    background: var(--panel2);
+    border-right:1px solid var(--border);
+    padding: 20px 16px;
+  }
+
+   .sidebar .brand{
+    font-weight: 700;
+    margin-bottom: 24px;
+    font-size: 1.1rem;
+  }
+
+  .sidebar nav a{
+    display:block;
+    color:var(--muted);
+    text-decoration: none;
+    padding: 9px 10px;
+    border-radius: 6px;
+    font-size:0.9rem;
+    margin-bottom: 2px;
+  }
+
+  .sidebar nav a.active{
+    background: var(--accent); color:#0f1117; font-weight:600;
+  }
+
+  /* ================TopBar================== */
+
+  .topbar {
+    grid-area: topbar;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+
+/* ---- Main content area: its OWN nested grid ---- */
+
+.main{
+ grid-area: main;
+ padding: 24px;
+ display:grid;
+ grid-template-columns: repeat(12,1fr);
+ gap:18px;
+ align-content:start;
+}
+
+ /* Stat cards: 4 across on desktop */
+.stat{
+  grid-column: span 3;
+  background: var(--panel);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:16px;
+}
+
+.stat.label{
+    color:var(--muted);font-size:0.8rem;
+}
+
+.stat .value{
+    font-size:1.5rem;
+    font-weight:700;
+    margin:4px 0;
+}
+
+.stat .delta{
+    font-size:0.8rem;
+    color:var(--good);
+}
+
+.stat .deltadown{
+    color:#ff6c6c;
+}
+
+ /* Big chart panel + side panel */
+
+ .chart{
+    grid-column:span 8;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    min-height: 260px;
+ }
+
+ .activity{
+    grid-column: span 4;
+    background: var(--panel);
+    border:1px solid war(--border);
+    border-radius: 10px;
+    padding: 16px;
+ }
+
+ .activity h3,.chart h3 {
+    margin:0 0 12px;
+    font-size:0.95rem;
+ }
+
+ .activity ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+    font-size: 0.85rem;
+    color:var(--muted);
+ }
+
+ .activity li {
+    padding:8px 0;
+    border-bottom: 1px solid var(--border);
+ }
+
+ .activity li:last-child { border-bottom: none; }

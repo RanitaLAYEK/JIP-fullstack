@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRID PRACTICE</title>
+    <link rel="stylesheet" type="text/css" href="grid1.css" />
+  </head>
+  <body>
+    <p class="note">
+      A real dashboard layout: an outer <code>grid-template-areas </code>grid
+      (sidebar / topbar / main), with the main content area running its own
+      nested 12-column grid for stat cards, a chart, and a table. Resize the
+      window below <code>900px</code> and <code>640px </code>to see the
+      breakpoints kick in.
+    </p>
+
+    <div class="dashboard">
+      <aside class="sidebar">
+        <div class="brand">Acme Analytics</div>
+        <nav>
+          <a href="#" class="active">Overview</a>
+          <a href="#">customers</a>
+          <a href="#">orders</a>
+          <a href="#">Reports</a>
+          <a href="#">settings</a>
+        </nav>
+      </aside>
+      <header class="topbar">
+        <span> Dashboard </span>
+        <span>Welcome back 👋</span>
+      </header>
+
+      <!-- Main -->
+      <main class="main">
+        <div class="stat">
+          <div class="label">Revenue</div>
+          <div class="value">$48290</div>
+          <div class="delta">▲ 12.4% vs last month</div>
+        </div>
+        <div class="stat">
+          <div class="label">Orders</div>
+          <div class="value">1,204</div>
+          <div class="delta">▲ 3.1% vs last month</div>
+        </div>
+
+        <div class="stat">
+          <div class="label">New Customers</div>
+          <div class="value">312</div>
+          <div class="deltadown">▲ 1.8% vs last month</div>
+        </div>
+
+        <div class="stat">
+          <div class="label">Refund Rate</div>
+          <div class="value">1.2%</div>
+          <div class="delta">▲ 0.2% vs last month</div>
+        </div>
+
+        <div class="chart">
+          <h3>weekly Revenue</h3>
+          <div class="bars">
+            <div class="bar" style="height: 40%"></div>
+            <div class="bar" style="height: 65%"></div>
+            <div class="bar" style="height: 50%"></div>
+            <div class="bar" style="height: 80%"></div>
+            <div class="bar" style="height: 70%"></div>
+            <div class="bar" style="height: 95%"></div>
+            <div class="bar" style="height: 60%"></div>
+          </div>
+        </div>
+        <div class="activity">
+          <h3>Recent Activity</h3>
+          <ul>
+            <li>Order #4821 placed — 2 min ago</li>
+            <li>New signup: J. Rivera — 14 min ago</li>
+            <li>Refund issued #4802 — 1 hr ago</li>
+            <li>Order #4819 shipped — 2 hr ago</li>
+            <li>New signup: T. Okafor — 3 hr ago</li>
+          </ul>
+        </div>
+
+        <div class="table-panel">
+          <h3>Recent Orders</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Order</th>
+                <th>Customer</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#4821</td>
+                <td>Maria Chen</td>
+                <td>$210.00</td>
+                <td>paid</td>
+              </tr>
+              <tr>
+                <td>#4820</td>
+                <td>James Wu</td>
+                <td>$85.50</td>
+                <td><span class="status paid">Paid</span></td>
+              </tr>
+              <tr>
+                <td>#4819</td>
+                <td>Aisha Bello</td>
+                <td>$210.00</td>
+                <td><span class="status pending">Pending</span></td>
+              </tr>
+              <tr>
+                <td>#4818</td>
+                <td>Tom Baker</td>
+                <td>$44.99</td>
+                <td><span class="status paid">Paid</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

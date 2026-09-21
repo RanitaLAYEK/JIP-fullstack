@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox practice</title>
+    <link rel="stylesheet" type="text/css" href="flexbox.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Flexbox Mini-Project</h1>
+      <p>
+        Five small, real layout patterns. Open dev tools, edit the CSS, and
+        watch what changes.
+      </p>
+    </header>
+
+    <section>
+      <h2>1. Navbar — <code>justify-content: space-between</code></h2>
+      <p class="desc">
+        A row with a logo on one side and links on the other. Try changing
+        <code>space-between</code> to <code>flex-end</code> or
+        <code>space-around</code>.
+      </p>
+
+      <nav class="navbar">
+        <div class="logo">Brand</div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section>
+      <h2>
+        2. Card Gallery — <code>flex-wrap</code> + <code>flex: 1 1 180px</code>
+      </h2>
+      <p class="desc">
+        Cards grow to fill space and wrap to new rows on narrow screens. Resize
+        the window, or change the <code>flex-basis</code> (the
+        <code>180px</code>) on <code>.card</code>.
+      </p>
+      <div class="gallery">
+        <div class="card">
+          <h3>Card One</h3>
+          <p>Grows and shrinks with the row.</p>
+        </div>
+        <div class="card">
+          <h3>Card Two</h3>
+          <p>Same rules, same behavior.</p>
+        </div>
+        <div class="card">
+          <h3>Card Three</h3>
+          <p>Try adding a 4th and 5th card.</p>
+        </div>
+        <div class="card">
+          <h3>Card Four</h3>
+          <p>Watch it wrap on smaller widths.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>3. Holy Grail Layout — nested flex containers</h2>
+      <p class="desc">
+        A column flex container (header / body / footer) with the body itself
+        being a row flex container (sidebar / main). This is the classic flexbox
+        page skeleton.
+      </p>
+      <div class="holy-grail">
+        <div class="hg-header">Header</div>
+        <div class="hg-body">
+          <div class="hg-sidebar">
+            Sidebar<br />(fixed width, <code>flex: 0 0 160px</code>)
+          </div>
+          <div class="hg-main">
+            Main content area — <code>flex: 1</code>, takes all remaining width
+            and height.
+          </div>
+        </div>
+        <div class="hg-footer">Footer</div>
+      </div>
+    </section>
+    <section>
+      <h2>4. Pricing Cards — <code>align-items</code></h2>
+      <p class="desc">
+        Cards of different heights in a row. Change
+        <code>.pricing { align-items: ... }</code> to <code>stretch</code>,
+        <code>center</code>, or <code>flex-start</code> to see the difference.
+      </p>
+      <div class="pricing">
+        <div class="plan">
+          <h3>Basic</h3>
+          <div class="price">$5/mo</div>
+          <p>Good for getting started.</p>
+        </div>
+        <div class="plan featured">
+          <h3>Pro</h3>
+          <div class="price">$15/mo</div>
+          <p>Most popular plan, extra padding makes this card taller.</p>
+        </div>
+        <div class="plan">
+          <h3>Team</h3>
+          <div class="price">$30/mo</div>
+          <p>For groups.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>
+        5. Perfect Centering — <code>justify-content</code> +
+        <code>align-items</code>
+      </h2>
+      <p class="desc">
+        The two-line trick that centers anything, both horizontally and
+        vertically.
+      </p>
+      <div class="center-box">
+        <div class="pill">Centered content</div>
+      </div>
+    </section>
+    <footer>
+      Try renaming values in the CSS (flex-direction, justify-content,
+      align-items, flex-wrap, gap) and reload to see the effect.
+    </footer>
+  </body>
+</html>
