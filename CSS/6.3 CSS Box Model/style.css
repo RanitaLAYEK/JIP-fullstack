@@ -1,0 +1,29 @@
+div{
+    width:200px;
+    height:200px;
+}
+
+.aqua{
+    background-color: cadetblue;
+    padding: 20px;
+    border:10px solid black;
+}
+
+
+.yellow{
+    background-color: gold;
+    border:solid black;
+    border-width: 20px 10px;
+    margin-left:260px;
+}
+
+
+.indianred{
+    background-color:indianred;
+    border:10px solid black;
+    margin-left:40px;
+}
+
+p {
+    margin: 0;
+  }
